@@ -28,8 +28,7 @@ function checkEcho(str) {
         str = str.slice(0, -2);
         console.log(str);
         checkEcho(str);
-    }
-    
+    }   
 }
   
 const yodel = "Yodelayheeeeehooooo";
@@ -62,3 +61,30 @@ function calculator(num1, num2, operator) {
 console.log(calculator(2, 10, "-")); 
 console.log(calculator(20, 3, "*")); 
 console.log(calculator(10, 0, "/")) 
+
+
+
+// 3. DISTANCING
+// Get Area and Perimeter based on the radius.
+
+class Distanciation{
+
+    constructor(radius) {
+        this.radius = radius;
+        this.pi = 3.14;
+    }
+  
+    getArea(){
+    return this.pi * this.radius ** 2;
+    //return this.pi * Math.pow(this.radius, 2);
+    }
+  
+    getPerimeter(){
+    return 2 * this.pi * this.radius;
+    } 
+}
+
+const socialDistancing = new Distanciation(5);
+
+console.log(socialDistancing.getArea()); // 78.53
+console.log(socialDistancing.getPerimeter()) // 31.41
