@@ -64,23 +64,22 @@ console.log(calculator(10, 0, "/"))
 
 
 
-// 3. DISTANCING
+// 4. DISTANCING
 // Get Area and Perimeter based on the radius.
 
 class Distanciation{
 
     constructor(radius) {
         this.radius = radius;
-        this.pi = 3.14;
     }
   
     getArea(){
-    return this.pi * this.radius ** 2;
-    //return this.pi * Math.pow(this.radius, 2);
+    return Math.PI * this.radius ** 2;
+    //return Math.PI * Math.pow(this.radius, 2);
     }
   
     getPerimeter(){
-    return 2 * this.pi * this.radius;
+    return 2 * Math.PI * this.radius;
     } 
 }
 
@@ -88,3 +87,21 @@ const socialDistancing = new Distanciation(5);
 
 console.log(socialDistancing.getArea()); // 78.53
 console.log(socialDistancing.getPerimeter()) // 31.41
+
+
+
+// 5. MYEACH
+// Function that simulates the forEach method. It expects an array and a function.
+
+function myEach(arr, func) {
+	for (let i= 0; i < arr.length; i++) {
+  	console.log(func(arr[i]));
+  }
+}
+
+
+let plusTwo = (num) =>  num + 2;
+
+let myArr = [1, 2, 4, 6, 8, 10];
+
+console.log(myEach(myArr, plusTwo));
