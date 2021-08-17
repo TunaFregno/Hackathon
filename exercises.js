@@ -99,9 +99,29 @@ function myEach(arr, func) {
   }
 }
 
-
 let plusTwo = (num) =>  num + 2;
 
 let myArr = [1, 2, 4, 6, 8, 10];
 
 console.log(myEach(myArr, plusTwo));
+
+
+
+// 6. WORD COUNT
+// Count the number of words. Returns an error message with the first 30 words.
+
+function wordCount(sentence) {
+	let splitSentence = sentence.split(' ')
+  let counter = 0;
+  
+  if (splitSentence.length > 30){
+  	let slicingSentence = splitSentence.slice(0, 29);
+    let joinSentence = slicingSentence.join(" ")
+    return `ERROR: you wrote ${splitSentence.length} words. We only can accept the following words: ${joinSentence}. -`
+  } else {
+  	return splitSentence.length;
+  }
+}
+
+console.log(wordCount("Perfection is achieved, not when there is nothing more to add, but when there is nothing left to take away. - Antoine de Saint-Exupery")); 
+console.log(wordCount("Life is a series of natural and spontaneous changes. Don't resist them; that only creates sorrow. Let reality be reality. Let things flow naturally forward in whatever way they like. ― Lao Tzu")) 
