@@ -107,7 +107,26 @@ console.log(myEach(myArr, plusTwo));
 
 
 
-// 6. WORD COUNT
+// 6. MYMAP
+// Function that simulates the forEach method. It expects an array and a function.
+
+function myMap(arr, func) {
+    let newArr = [];
+	for (let i= 0; i < arr.length; i++) {
+  	newArr.push(func(arr[i]));
+  }
+  return newArr;
+}
+
+let plusFive = (num) =>  num + 5;
+
+let myNewArr = [0, 2, 4, 10];
+
+console.log(myMap(myNewArr, plusFive));
+
+
+
+// 7. WORD COUNT
 // Count the number of words. Returns an error message with the first 30 words.
 
 function wordCount(sentence) {
