@@ -91,7 +91,7 @@ console.log(socialDistancing.getPerimeter()) // 31.41
 
 
 // 5. MYEACH
-// Function that simulates the forEach method. It expects an array and a function.
+// Function that simulates the .forEach method. It expects an array and a function.
 
 function myEach(arr, func) {
 	for (let i= 0; i < arr.length; i++) {
@@ -108,7 +108,7 @@ console.log(myEach(myArr, plusTwo));
 
 
 // 6. MYMAP
-// Function that simulates the forEach method. It expects an array and a function.
+// Function that simulates the .map method. It expects an array and a function.
 
 function myMap(arr, func) {
     let newArr = [];
