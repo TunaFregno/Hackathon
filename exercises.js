@@ -131,7 +131,6 @@ console.log(myMap(myNewArr, plusFive));
 
 function wordCount(sentence) {
 	let splitSentence = sentence.split(' ')
-  let counter = 0;
   
   if (splitSentence.length > 30){
   	let slicingSentence = splitSentence.slice(0, 29);
@@ -143,4 +142,14 @@ function wordCount(sentence) {
 }
 
 console.log(wordCount("Perfection is achieved, not when there is nothing more to add, but when there is nothing left to take away. - Antoine de Saint-Exupery")); 
-console.log(wordCount("Life is a series of natural and spontaneous changes. Don't resist them; that only creates sorrow. Let reality be reality. Let things flow naturally forward in whatever way they like. ― Lao Tzu")) 
+console.log(wordCount("Life is a series of natural and spontaneous changes. Don't resist them; that only creates sorrow. Let reality be reality. Let things flow naturally forward in whatever way they like. ― Lao Tzu"))
+
+
+
+// 8. MERGE
+// Takes two or more objects and returns one object with all the properties. If a property is in more than one object, the object passed first should have priority.
+
+
+function merge(obj1, obj2) {
+
+}
