@@ -176,7 +176,28 @@ const invert = (obj) => {
          newObj[obj[key]] = key;
       }
     return newObj;
-  };
+};
   
-  console.log(invert({ a: 3, b: 2 }))// { 2: 'b', 3: 'a' } 
+console.log(invert({ a: 3, b: 2 }))// { 2: 'b', 3: 'a' } 
+
+
+
+// 10. Min, Max, Length and Average
+// Return the smallest and highest value of an array as well as its length and its average value.
+
+const minMaxLengthAverage = (arr) => {
+
+    let newArr = [];
+    newArr.push(Math.min(...arr));
+    newArr.push(Math.max(...arr));
+    newArr.push(arr.length);
+    
+    const avg = arr.reduce((a, b) => a + b, 0) / arr.length;
+    newArr.push(avg);
+    
+    return newArr;
+};
+  
+console.log(minMaxLengthAverage([7, 13, 3, 77, 100])); // [ 3, 100, 5, 40 ]
+
 
