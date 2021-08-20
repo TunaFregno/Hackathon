@@ -169,4 +169,14 @@ console.log(merge({ a: 3, b: 2 }, { a: 2, c: 4 }, { e: 8, c: 5})); // { a: 3, b:
 // 9. INVERT
 // Returns a new object with the values of the passed object as properties and the keys as values.
 
+const invert = (obj) => {
+
+    let newObj = {};
+    for (let key in obj) {
+         newObj[obj[key]] = key;
+      }
+    return newObj;
+  };
+  
+  console.log(invert({ a: 3, b: 2 }))// { 2: 'b', 3: 'a' } 
 
