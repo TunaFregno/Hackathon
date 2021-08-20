@@ -214,4 +214,20 @@ const arrayOfMultiples = (num, len) => {
   return newArr;
 };
 
-console.log(arrayOfMultiples(7, 5))
+console.log(arrayOfMultiples(7, 5));
+
+
+
+// 12. OBJECT TO AN ARRAY OF ARRAYS
+// Converts an object into an array of keys and values.
+
+const objectToArray = (obj) => {
+
+  let newArr = [];
+	for (let key in obj){
+  newArr.push([key, obj[key]])
+  }
+  return newArr;
+};
+
+console.log(objectToArray({likes: 2, dislikes: 3, followers: 10})) //[["likes", 2], ["dislikes", 3], ["followers", 10]]
