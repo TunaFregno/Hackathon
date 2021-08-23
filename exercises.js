@@ -231,3 +231,17 @@ const objectToArray = (obj) => {
 };
 
 console.log(objectToArray({likes: 2, dislikes: 3, followers: 10})) //[["likes", 2], ["dislikes", 3], ["followers", 10]]
+
+
+
+// 13. PRINT THE CENTURY
+// Takes in a year and returns the correct century.
+
+const century = year => {
+	const c = Math.floor((year - 1) / 100) + 1;
+	return c + (c == 21 ? "st" : "th") + " century"
+}
+
+console.log(century(999)) // "10th century"
+console.log(century(1001)) // "11th century"
+console.log(century(2005)) // "21st century"
