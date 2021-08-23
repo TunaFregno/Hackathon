@@ -303,4 +303,6 @@ console.log(intersect([[2, 1], [4, 4]], [[1, 1], [8, 8]])); // => [2, 1], [4, 4]
 
 
 // 16. Loves Me, Loves Me Not…
+// Given a number of petals, return a string which repeats the phrases “Loves me” and “Loves me not” for every alternating petal.
+
 
