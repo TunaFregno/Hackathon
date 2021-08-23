@@ -269,5 +269,38 @@ console.log(myFilter(myNewArr, plusFive));
 
 
 
-// 15. Loves Me, Loves Me Not…
+// 15. RECTANGLE INTERSECTION
+// Expects two rectangles and returns the intersected rectangle (if any).
+
+const createRect = rect => {
+  return {
+    left: Math.min(rect[0][0], rect[1][0]),
+    right: Math.max(rect[0][0], rect[1][0]),
+    bottom: Math.min(rect[0][1], rect[1][1]),
+    top: Math.max(rect[0][1], rect[1][1])
+  };
+};
+
+const intersect = (rect1, rect2) => {
+  let firstRect = createRect(rect1);
+  let secondRect = createRect(rect2);
+
+  let left = Math.max(firstRect.left, secondRect.left);
+  let right = Math.min(firstRect.right, secondRect.right);
+  let bottom = Math.max(firstRect.bottom, secondRect.bottom);
+  let top = Math.min(firstRect.top, secondRect.top);
+
+  if (left > right || bottom > top) {
+    return [];
+  }
+
+  return [[left, bottom], [right, top]];
+};
+
+console.log(intersect([[1, 1], [4, 3]], [[2, 2], [6, 7]])); // => [2, 2], [4, 3]
+console.log(intersect([[2, 1], [4, 4]], [[1, 1], [8, 8]])); // => [2, 1], [4, 4]
+
+
+
+// 16. Loves Me, Loves Me Not…
 
