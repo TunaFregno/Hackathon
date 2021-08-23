@@ -245,3 +245,29 @@ const century = year => {
 console.log(century(999)) // "10th century"
 console.log(century(1001)) // "11th century"
 console.log(century(2005)) // "21st century"
+
+
+// 14. MYFILTER
+// Function that simulates the .filter method. It expects an array and a function.
+
+const myFilter = (collection, fn) => {
+  const result = [];
+  myEach(collection, function(el, index, arr) {
+    if (fn(el, index, arr)) {
+      result.push(el);
+    }
+  });
+
+  return result;
+}
+
+const filtered = myFilter([2, 8, 5, 15], function(el, index) {
+  return el % index === 0;
+});
+
+console.log(myFilter(myNewArr, plusFive));
+
+
+
+// 15. Loves Me, Loves Me Not…
+
