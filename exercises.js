@@ -306,3 +306,23 @@ console.log(intersect([[2, 1], [4, 4]], [[1, 1], [8, 8]])); // => [2, 1], [4, 4]
 // Given a number of petals, return a string which repeats the phrases “Loves me” and “Loves me not” for every alternating petal.
 
 
+
+// 17. HISTORICAL MARKER
+//  Able to choose if you want to sort it ascendingly or descendingly thanks to the keywords DSC/ASC. 
+
+const sortDates = (arr, str) =>{
+    let sortArr = arr.sort()
+    if (str === 'DSC') {
+        sortArr = sortArr.reverse()
+    }
+    return sortArr;
+} 
+
+console.log(sortDates(["20-02-2020_12:30", "20-02-2018_12:30", "20-02-2020_12:15"], "ASC")) 
+// ["20-02-2018_12:30", "20-02-2020_12:15", "20-02-2020_12:30"]
+    
+console.log(sortDates(["15-06-2020_12:30", "15-06-2018_12:30", "15-06-2020_12:15"], "DSC")) 
+// ["15-06-2020_12:30", "15-06-2020_12:15", "15-06-2018_12:30"]
+    
+console.log(sortDates(["10-02-2000_10:03", "14-02-2000_18:29", "01-01-1999_00:55"], "ASC")) 
+// ["01-01-1999_00:55", "10-02-2000_10:03", "14-02-2000_18:29"]
