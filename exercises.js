@@ -326,3 +326,117 @@ console.log(sortDates(["15-06-2020_12:30", "15-06-2018_12:30", "15-06-2020_12:15
     
 console.log(sortDates(["10-02-2000_10:03", "14-02-2000_18:29", "01-01-1999_00:55"], "ASC")) 
 // ["01-01-1999_00:55", "10-02-2000_10:03", "14-02-2000_18:29"]
+
+
+// 18. ENIGMA
+// Expects a message and encrypts it or decrypts it based on our “enigma” dictionary.
+
+const encrypt = (str) => {
+    const enigma = {
+        a: 'm',
+        b: 'a',
+        c: 'f',
+        d: 'b',
+        e: 'c',
+        f: 'n',
+        g: 'z',
+        h: 'w',
+        i: 'x',
+        j: 'u',
+        k: 'p',
+        l: 'd',
+        m: 'y',
+        n: 'q',
+        o: 'o',
+        p: 'r',
+        q: 't',
+        r: 'e',
+        s: 'v',
+        t: 'h',
+        u: 'i',
+        v: 'j',
+        w: 'k',
+        x: 'l',
+        y: 'g',
+        z: 's'
+    }
+    
+    let newStr = str.split('')
+    let encWord = [];
+    
+    
+    for (let l in newStr) {
+    for (let letter in enigma) {
+     if (newStr[l] === ' '){
+      encWord.push(' ')
+      break
+     } 
+     if (newStr[l] === letter) {
+     encWord.push(enigma[letter]);
+     }
+    }
+    }
+    
+    return encWord.join('')
+    
+}
+
+
+const decrypt = (str) => {
+    const enigma = {
+        a: 'm',
+        b: 'a',
+        c: 'f',
+        d: 'b',
+        e: 'c',
+        f: 'n',
+        g: 'z',
+        h: 'w',
+        i: 'x',
+        j: 'u',
+        k: 'p',
+        l: 'd',
+        m: 'y',
+        n: 'q',
+        o: 'o',
+        p: 'r',
+        q: 't',
+        r: 'e',
+        s: 'v',
+        t: 'h',
+        u: 'i',
+        v: 'j',
+        w: 'k',
+        x: 'l',
+        y: 'g',
+        z: 's'
+    }
+    
+    let newStr = str.split('')
+    let decWord = [];
+    
+    
+    for (let l in newStr) {
+    for (let letter in enigma) {
+     if (newStr[l] === ' '){
+      decWord.push(' ')
+      break
+     } 
+     if (newStr[l] === enigma[letter]) {
+     decWord.push(letter);
+     }
+    }
+    }
+    
+    return decWord.join('')
+    
+}
+    
+    
+    
+console.log(encrypt('attack')) 
+// 'mhhmfp'
+console.log(encrypt('fire in the hole'))
+// 'nxec xq hwc wodc'
+console.log(decrypt('x eofp ho bcfegrh mdd hwcvc clcefxvcv')) 
+// 'i rock to decrypt all these exercises'
