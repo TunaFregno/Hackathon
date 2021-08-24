@@ -332,6 +332,7 @@ console.log(sortDates(["10-02-2000_10:03", "14-02-2000_18:29", "01-01-1999_00:55
 // Expects a message and encrypts it or decrypts it based on our “enigma” dictionary.
 
 const encrypt = (str) => {
+
     const enigma = {
         a: 'm',
         b: 'a',
@@ -364,25 +365,24 @@ const encrypt = (str) => {
     let newStr = str.split('')
     let encWord = [];
     
-    
     for (let l in newStr) {
-    for (let letter in enigma) {
-     if (newStr[l] === ' '){
-      encWord.push(' ')
-      break
-     } 
-     if (newStr[l] === letter) {
-     encWord.push(enigma[letter]);
-     }
-    }
+        for (let letter in enigma) {
+            if (newStr[l] === ' ') {
+                encWord.push(' ')
+                break
+            } 
+        
+            if (newStr[l] === letter) {
+                encWord.push(enigma[letter]);
+            }
+        }
     }
     
     return encWord.join('')
-    
 }
 
-
 const decrypt = (str) => {
+
     const enigma = {
         a: 'm',
         b: 'a',
@@ -415,24 +415,21 @@ const decrypt = (str) => {
     let newStr = str.split('')
     let decWord = [];
     
-    
     for (let l in newStr) {
-    for (let letter in enigma) {
-     if (newStr[l] === ' '){
-      decWord.push(' ')
-      break
-     } 
-     if (newStr[l] === enigma[letter]) {
-     decWord.push(letter);
-     }
+        for (let letter in enigma) {
+            if (newStr[l] === ' '){
+                decWord.push(' ')
+                break
+            } 
+
+            if (newStr[l] === enigma[letter]) {
+                decWord.push(letter);
+            }
+        }
     }
-    }
-    
-    return decWord.join('')
-    
-}
-    
-    
+
+    return decWord.join('') 
+} 
     
 console.log(encrypt('attack')) 
 // 'mhhmfp'
@@ -440,3 +437,44 @@ console.log(encrypt('fire in the hole'))
 // 'nxec xq hwc wodc'
 console.log(decrypt('x eofp ho bcfegrh mdd hwcvc clcefxvcv')) 
 // 'i rock to decrypt all these exercises'
+
+
+
+// 19. GET ALL THE PAIRS
+// Returns all the pair of numbers with a sum reaching the targeted numbers.
+
+const allPairs = (arr, total) => {
+
+	let newArr= [];
+  
+    for (let num in arr){
+   	    for (let n in arr){
+   		    if (arr[num] + arr[n] === total){
+   	
+    		    newArr.push([arr[num], arr[n]]);
+	
+   		    }
+  	    }
+ 	}
+
+    newArr.sort()
+  
+    for (let i = 0; i < newArr.length; i++) {
+    	if (newArr[i][0] === newArr[newArr.length -1][1] && newArr[i][1] === newArr[newArr.length -1][0]) {
+      	    newArr.pop()
+        
+        }
+
+    } 
+  
+    return newArr
+}
+
+
+console.log(allPairs([2, 4, 5, 3], 7)) 
+// [[2, 5], [3, 4]]
+// 2 + 5 = 7 and 3 + 4 = 7
+console.log(allPairs([5, 3, 9, 2, 1], 3)) 
+// [[1, 2]]
+console.log(allPairs([4, 5, 1, 3, 6, 8], 9)) 
+// [[1, 8], [3, 6], [4, 5]]
