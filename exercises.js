@@ -519,3 +519,31 @@ console.log(ticTacToe([
     ["O", "O", "X"],
     ["X", "X", "O"]
 ])) // "Draw. Play again"
+
+
+
+
+// 21. REMOVE THE LAST VOWEL 
+
+function killLastVowel(sentences) {
+	let eachW = sentences.split(' ');
+  let vowLs = 'aeiouAEIOU';
+  let newArrW = [];
+  let flag = true;
+  
+  for (let words in eachW) {
+  	newArrW.push(eachW[words].split('').reverse().join(''))
+    console.log(vowLs[words])
+  }
+  
+  
+  return newArrW
+
+}
+
+
+console.log(killLastVowel("Propulsion is a great place to get headache."))
+// "Propulsin s  gret plac t gt headach."
+
+console.log(killLastVowel("I love Javascript so much."))
+// " lov Javascrpt s mch."
