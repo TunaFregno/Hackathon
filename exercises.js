@@ -547,3 +547,71 @@ console.log(killLastVowel("Propulsion is a great place to get headache."))
 
 console.log(killLastVowel("I love Javascript so much."))
 // " lov Javascrpt s mch."
+
+
+
+
+// 22. SORT YOUR CONTACS
+
+function sortContacts(arr, sorting) {
+	if(arr){
+        if(sorting === "ASC"){
+            return arr.sort(ascending) 
+        }else if(sorting === "DESC"){
+            return arr.sort(descending) 
+        }else {
+            return "Please choose how to sort your contacts";
+        }
+    }else{
+        return [];
+    }
+
+}
+
+function ascending(a,b){
+    if (a.split(" ")[1] < b.split(" ")[1]){
+       return -1; 
+    } else{
+        return 1;
+    }
+}
+function descending(a,b){
+    if (a.split(" ")[1] > b.split(" ")[1]){
+       return -1; 
+    } else{
+        return 1;
+    }
+}
+
+console.log(sortContacts([
+    "Bat Man",
+    "Bat Girl",
+    "Dean Rouflaquette",
+    "Albert Musketeer",
+    "Captain America"
+], "ASC"))
+// ['Captain America','Bat Girl','Bat Man','Albert Musketeer','Dean Rouflaquette']
+
+console.log(sortContacts([
+    "Boutros Boutros-Ghali",
+    "Kofi Annan",
+    "Ban Ki-moon",
+    "António Guterres"
+], "DESC"))
+// ['Ban Ki-moon','António Guterres','Boutros Boutros-Ghali','Kofi Annan']
+
+
+
+console.log(sortContacts([], "DESC")) // []
+console.log(sortContacts(null, "DESC")) // []
+console.log(sortContacts(undefined, "DESC")) // []
+
+
+
+console.log(sortContacts([
+    "Bat Man",
+    "Bat Girl",
+    "Dean Rouflaquette",
+    "Albert Musketeer",
+    "Captain America"
+])) // "Please choose how to sort your contacts"
