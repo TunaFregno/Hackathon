@@ -478,3 +478,44 @@ console.log(allPairs([5, 3, 9, 2, 1], 3))
 // [[1, 2]]
 console.log(allPairs([4, 5, 1, 3, 6, 8], 9)) 
 // [[1, 8], [3, 6], [4, 5]]
+
+
+
+// 20. TIC TAC TOE
+
+function ticTacToe(arr) {
+	let winningComb = [[0,1,2],[3,4,5], [6,7,8], [0,3,6], [1,4,7], [2,5,8], [0,4,8], [2,4,6]]
+  let combs = [];
+  for (let list in arr){
+  	combs = combs.concat(arr[list]);
+  } 
+  for (let i in winningComb) {
+        
+   	if (combs[winningComb[i][0]] === "X" && combs[winningComb[i][1]] === "X" && combs[winningComb[i][2]] === "X"){
+    		return 'Winner: X'
+   	} 
+    
+    if (combs[winningComb[i][0]] === 'O' && combs[winningComb[i][1]] === 'O' && combs[winningComb[i][2]] === 'O'){
+    		return 'Winner: O';
+  	} 
+ } return 'Draw. Play again'
+}
+
+
+console.log(ticTacToe([
+    ["X", "O", "X"],
+    ["O", "X",  "O"],
+    ["O", "X",  "X"]
+])) // "Winner: X"
+
+console.log(ticTacToe([
+    ["O", "O", "O"],
+    ["O", "X", "X"],
+    ["E", "X", "X"]
+])) // "Winner: O"
+
+console.log(ticTacToe([
+    ["X", "X", "O"],
+    ["O", "O", "X"],
+    ["X", "X", "O"]
+])) // "Draw. Play again"
