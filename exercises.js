@@ -615,3 +615,39 @@ console.log(sortContacts([
     "Albert Musketeer",
     "Captain America"
 ])) // "Please choose how to sort your contacts"
+
+
+
+
+// 23. DONT WORRY, BE HAPPY
+
+
+function happyOrNot(num) {
+	let str = num.toString().split('');
+  let empt = [];
+  let total = 0;
+  
+  for (let n in str){
+    empt.push(parseInt(str[n])**2)
+  } 
+  for (let v in empt) {
+   total += empt[v]
+  }
+  if ( total === 1) {
+   return true
+  } else if (total === 4) {
+   return false
+  } else {
+   return happyOrNot(total)
+  }
+	
+}
+
+
+console.log(happyOrNot(19)) // true
+// because 19 >> 1^2 + 9^2 = 82 >> 8^2 + 2^2 = 68 >> 6^2 + 8^2 = 100 >> 1^2 + 0^2 + 0^2 = 1
+// We reached 1 meaning that 19 is a Happy Number.
+
+console.log(happyOrNot(203)) // true
+console.log(happyOrNot(11)) // false
+console.log(happyOrNot(107)) // false
