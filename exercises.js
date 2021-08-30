@@ -668,3 +668,29 @@ console.log(happyOrNot(107)) // false
 // 23. WHO IS THE PRESIDENT? 
 // Returns the majority of vote in the array.
 
+const whoIsThePresident = arr => {
+
+	if(!arr.length){return "Is it a democratic vote here ? Please vote again."}
+	
+	let vote = [];
+	arr.forEach(candidate => vote[candidate] ? vote[candidate]++ : vote[candidate] = 1);
+	
+	let highestScore = [Object.keys(vote)[0], Object.values(vote)[0]];
+	
+	for(candidate in vote)
+	{
+		if(vote[candidate] > highestScore[1])
+		{
+			highestScore = [candidate, vote[candidate]];
+		} else if (candidate != highestScore[0] && vote[candidate] === highestScore[1]) {
+			highestScore.push("DRAW");
+		}
+	}
+
+	return highestScore.includes("DRAW") ? "We got a draw ! Please vote again." : `${highestScore[0]} is our new president with ${highestScore[1]} votes !`
+}
+
+
+whoIsThePresident(["Teddy Bear", "Chewbacca", "Dracula", "Chewbacca"]); // Chewbacca is our new president with 2 votes !
+whoIsThePresident(["Chewbacca", "Teddy Bear", "Dracula", "Chewbacca", "Dracula"]); // We got a draw ! Please vote again.
+whoIsThePresident([]); // Is it a democratic vote here ? Please vote again.
