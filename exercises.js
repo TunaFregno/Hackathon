@@ -305,6 +305,18 @@ console.log(intersect([[2, 1], [4, 4]], [[1, 1], [8, 8]])); // => [2, 1], [4, 4]
 // 16. Loves Me, Loves Me Not…
 // Given a number of petals, return a string which repeats the phrases “Loves me” and “Loves me not” for every alternating petal.
 
+const lovesMe = n => {
+	let str = ""
+	for (let i = 0; i < n; i++) {
+		let phrase = i % 2 === 0 ? "Loves me, " : "Loves me not, "
+		if (i === n - 1) phrase = phrase.toUpperCase()
+		str += phrase
+	}
+	return str.slice(0,-2)
+}
+
+console.log(lovesMe(3)) 
+
 
 
 // 17. HISTORICAL MARKER
