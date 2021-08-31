@@ -694,3 +694,25 @@ const whoIsThePresident = arr => {
 whoIsThePresident(["Teddy Bear", "Chewbacca", "Dracula", "Chewbacca"]); // Chewbacca is our new president with 2 votes !
 whoIsThePresident(["Chewbacca", "Teddy Bear", "Dracula", "Chewbacca", "Dracula"]); // We got a draw ! Please vote again.
 whoIsThePresident([]); // Is it a democratic vote here ? Please vote again.
+
+
+
+
+// 24. LONGEST WORD
+
+const longest_word = (sentence) => {
+ let longest = " ";
+ let array = sentence.split(' ');
+    for (let i = 0; i < array.length; i++ ) {
+        if (array[i].length > longest.length) {
+            longest = array[i];
+        } 
+    }
+  return longest;
+}
+ 
+ 
+
+console.log(longest_word("This is an amazing test")) // "amazing"
+console.log(longest_word("Laurent Colin")) // "Laurent"
+console.log(longest_word("Propulsion 123")) // "Propulsion"
