@@ -709,10 +709,28 @@ const longest_word = (sentence) => {
         } 
     }
   return longest;
-}
- 
- 
+} 
 
-console.log(longest_word("This is an amazing test")) // "amazing"
-console.log(longest_word("Laurent Colin")) // "Laurent"
-console.log(longest_word("Propulsion 123")) // "Propulsion"
+console.log(longest_word("This is an amazing test")) 
+console.log(longest_word("Valentina Colin")) 
+console.log(longest_word("Numbers 123")) 
+
+
+
+// 25. SUM OF NUMBERS EXERCISE
+
+const sum_nums = (num) => {
+    let total = 0;
+    
+    if (num > 0) {
+        for (let i = 1; i <= num; i++) {
+            total += i;
+        } 
+    }
+    
+    return total;
+}
+   
+console.log(sum_nums(6)) // 21
+console.log(sum_nums(1)) // 1
+console.log(sum_nums(0)) // 0
