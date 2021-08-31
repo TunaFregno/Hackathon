@@ -734,3 +734,20 @@ const sum_nums = (num) => {
 console.log(sum_nums(6)) // 21
 console.log(sum_nums(1)) // 1
 console.log(sum_nums(0)) // 0
+
+
+
+// 26. TURN MINUTES INTO HOURS EXERCISE
+
+const time_conversion = (minutes) => {
+    let h = Math.floor(minutes / 60);
+    let m = minutes%60;
+
+    return `${String(h).padStart(2, "0")}:${String(m).padStart(2, "0")}`;
+
+}
+
+console.log(time_conversion(155)) // "02:35"
+console.log(time_conversion(61)) // "01:01"
+console.log(time_conversion(60)) // "01:00"
+console.log(time_conversion(59)) // "00:59"
