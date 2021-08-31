@@ -744,10 +744,31 @@ const time_conversion = (minutes) => {
     let m = minutes%60;
 
     return `${String(h).padStart(2, "0")}:${String(m).padStart(2, "0")}`;
-
 }
 
 console.log(time_conversion(155)) // "02:35"
 console.log(time_conversion(61)) // "01:01"
 console.log(time_conversion(60)) // "01:00"
 console.log(time_conversion(59)) // "00:59"
+
+
+
+
+// 27. COUNTING VOWELS IN A STRING 
+
+
+const count_vowels = (string) => {
+ let vowels = 'aeiou';
+ let totalV = 0;
+ 
+    for (let i = 0; i < string.length; i++){
+        if ( vowels.indexOf(string[i].toLowerCase()) > -1 ) totalV ++;
+    }
+
+    return totalV;
+}
+
+console.log(count_vowels("alphabet")) // 3
+console.log(count_vowels("Propulsion Academy")) // 7
+console.log(count_vowels("AaaAa")) // 5
+console.log(count_vowels("fly")) // 0
