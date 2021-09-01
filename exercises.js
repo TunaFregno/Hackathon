@@ -777,17 +777,17 @@ console.log(count_vowels("fly")) // 0
 
 // 28. PALINDROME EXERCISE
 
-
 function palindrome(string) {
     let r = '';
-     for (let i = string.length -1; i >= 0; i--){
+    for (let i = string.length -1; i >= 0; i--){
        r+= string[i];
     }
-     if (r === string) {
-     return true
-     } else return false
-  }
+    
+    if (r === string) {
+        return true
+    } else return false
+}
   
-  console.log(palindrome("ABBA")) // true
-  console.log(palindrome("tacocat")) // true
-  console.log(palindrome("abcd")) // false
+console.log(palindrome("ABBA")) // true
+console.log(palindrome("tacocat")) // true
+console.log(palindrome("abcd")) // false
