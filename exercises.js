@@ -791,3 +791,23 @@ function palindrome(string) {
 console.log(palindrome("ABBA")) // true
 console.log(palindrome("tacocat")) // true
 console.log(palindrome("abcd")) // false
+
+
+
+// 29. METHOD THAT RETURNS TRUE IF THE LETTER “Z” APPEARS WITHIN THREE LETTERS AFTER AN “A”.
+
+
+function nearby_az(string) {
+
+  for ( let i = 0; i < string.length; i++){
+   if (string[3] === 'z' || string[2] === 'z' || string[1] === 'z') {
+   return true;
+   } else return false;
+  }
+
+}
+
+console.log(nearby_az("abbcz")) // false
+console.log(nearby_az("acz")) // true
+console.log(nearby_az("abcz")) // true
+console.log(nearby_az("abba")) // false
