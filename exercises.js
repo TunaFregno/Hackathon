@@ -777,7 +777,7 @@ console.log(count_vowels("fly")) // 0
 
 // 28. PALINDROME EXERCISE
 
-function palindrome(string) {
+const palindrome = (string) => {
     let r = '';
     for (let i = string.length -1; i >= 0; i--){
        r+= string[i];
@@ -797,7 +797,7 @@ console.log(palindrome("abcd")) // false
 // 29. METHOD THAT RETURNS TRUE IF THE LETTER “Z” APPEARS WITHIN THREE LETTERS AFTER AN “A”.
 
 
-function nearby_az(string) {
+const nearby_az = (string) => {
 
   for ( let i = 0; i < string.length; i++){
    if (string[3] === 'z' || string[2] === 'z' || string[1] === 'z') {
