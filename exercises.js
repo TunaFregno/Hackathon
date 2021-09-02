@@ -811,3 +811,25 @@ console.log(nearby_az("abbcz")) // false
 console.log(nearby_az("acz")) // true
 console.log(nearby_az("abcz")) // true
 console.log(nearby_az("abba")) // false
+
+
+
+// 30. IF A PAIR OF NUMBERS IN THE ARRAY SUMS TO ZERO, RETURN THE POSITIONS OF THOSE TWO NUMBERS.
+
+const two_sum = (nums) => {
+ let indx = [];
+  
+  for (let i = 0; i < nums.length; i++)
+   for (let y = 0; y < nums.length; y++) 
+     if (nums[i] + nums[y] === 0)
+      indx.push([i, y]);
+
+ if ( indx.length === 0 ) {
+  return null;
+ }
+ return indx;
+}
+
+console.log(two_sum([1, 3, -1, 5])) // [[0, 2]]
+console.log(two_sum([1, 3, -1, 5, -3])) // [[0, 2], [1, 4]] 
+console.log(two_sum([1, 5, 3, -4])) // null 
