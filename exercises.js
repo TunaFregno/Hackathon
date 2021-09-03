@@ -857,3 +857,20 @@ const toyShare = (n, k, p) => {
 }
   
 console.log(toyShare(3, 5, 1))
+
+
+
+// 32. CHECKING IF THE VALUE IS BOOLEAN
+
+
+const is_it_true = (args) => {
+ if ( typeof args === typeof true) {
+  return true;
+ } else return false;
+}
+
+console.log(is_it_true(true)) // true
+console.log(is_it_true(false)) // true
+console.log(is_it_true('true')) // false
+console.log(is_it_true(1)) // false
+console.log(is_it_true('false')) // false
