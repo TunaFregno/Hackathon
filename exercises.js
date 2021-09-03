@@ -833,3 +833,27 @@ const two_sum = (nums) => {
 console.log(two_sum([1, 3, -1, 5])) // [[0, 2]]
 console.log(two_sum([1, 3, -1, 5, -3])) // [[0, 2], [1, 4]] 
 console.log(two_sum([1, 5, 3, -4])) // null 
+
+
+
+// 31. LAST POSITION KID
+// Return the position of the kid who gets two toys.
+
+// n kids are sitting in a circle.
+// k toys available to distribute.
+// i position to start from.
+
+
+const toyShare = (n, k, p) => {
+    let lastKid = n;
+   
+    for (let i = p; p < k; p++) {
+        lastKid--
+        if (lastKid === 0){
+            lastKid = n;
+        }
+    }
+    return lastKid;
+}
+  
+console.log(toyShare(3, 5, 1))
