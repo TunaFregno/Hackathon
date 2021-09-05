@@ -874,3 +874,22 @@ console.log(is_it_true(false)) // true
 console.log(is_it_true('true')) // false
 console.log(is_it_true(1)) // false
 console.log(is_it_true('false')) // false
+
+
+
+// 33. REPEAT A NUM OF STRINGS EXERCISE
+
+const repeat_string_num_times = (str, num) => {
+  let repeatS = '';
+  if (num <= 0) {
+    return '';
+   } for ( let i = 0; i < num; i++) {
+    repeatS += str;
+   }
+   return repeatS;
+  }
+
+console.log(repeat_string_num_times("abc", 3)) // 'abcabcabc'
+console.log(repeat_string_num_times("abc", 1)) // 'abc'
+console.log(repeat_string_num_times("abc", 0)) // ''
+console.log(repeat_string_num_times("abc", -1)) // ''
