@@ -893,3 +893,22 @@ console.log(repeat_string_num_times("abc", 3)) // 'abcabcabc'
 console.log(repeat_string_num_times("abc", 1)) // 'abc'
 console.log(repeat_string_num_times("abc", 0)) // ''
 console.log(repeat_string_num_times("abc", -1)) // ''
+
+
+
+// 34. ANAGRAM EXERCISE
+
+
+const isAnagram = (test, original) => {
+  let sort1 = test.toLowerCase().split('').sort().join('');
+  let sort2 = original.toLowerCase().split('').sort().join('');
+  if (sort1 === sort2) return true;
+  else return false;
+}
+
+console.log(isAnagram("foefet", "toffee")) // true
+console.log(isAnagram("Buckethead", "DeathCubeK")) // true
+console.log(isAnagram("Twoo", "WooT")) // true
+console.log(isAnagram("dumble", "bumble")) // false
+console.log(isAnagram("ound", "round")) // false
+console.log(isAnagram("apple", "pale")) // false
