@@ -933,3 +933,23 @@ console.log(add_all([5, 10])) // 45
 console.log(add_all([9, 10])) // 19
 console.log(add_all([0, 0])) // 0
 console.log(add_all([-1, 1])) // 0
+
+
+
+// 36. RETURN TRUE IF THE NUMBER IS THE RESULT OF I POWER BY 2
+
+function is_power_of_two(num) {
+  for (let i = 0; i < num; i++){
+  let res = Math.pow(2,i);
+   if ( num === res) {
+     return true;
+   } 
+  } 
+  return false;
+}
+
+console.log(is_power_of_two(8)) // true
+console.log(is_power_of_two(16)) // true
+console.log(is_power_of_two(32)) // true
+console.log(is_power_of_two(12)) // false 
+console.log(is_power_of_two(24)) // false 
