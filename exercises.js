@@ -912,3 +912,24 @@ console.log(isAnagram("Twoo", "WooT")) // true
 console.log(isAnagram("dumble", "bumble")) // false
 console.log(isAnagram("ound", "round")) // false
 console.log(isAnagram("apple", "pale")) // false
+
+
+
+// 35.  RETURN THE SUM OF THE NUM IN A RANGE 
+
+const add_all = (arr) => {
+ let arr1 = arr[0];
+ let arr2 = arr[1];
+ let total = 0;
+ 
+ for (let i = arr1; arr1 <= arr2; arr1++) {
+   total += arr1;
+ }
+ return total;
+}
+
+console.log(add_all([1, 4])) // 10
+console.log(add_all([5, 10])) // 45
+console.log(add_all([9, 10])) // 19
+console.log(add_all([0, 0])) // 0
+console.log(add_all([-1, 1])) // 0
