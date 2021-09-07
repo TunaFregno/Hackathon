@@ -958,10 +958,22 @@ console.log(is_power_of_two(24)) // false
 
 // 37. RETURN THE HIGHTS AND THE LOWEST
 
-function highAndLow(numbers){
+const highAndLow = (numbers) => {
   numbers = numbers.split(' ').map(Number);
   return Math.max.apply(0, numbers) + ' ' + Math.min.apply(0, numbers);
 }
 
-
 console.log(highAndLow("4 5 29 54 4 0 -214 542 -64 1 -3 6 -6"), "542 -214");
+
+
+
+// 38. FUNCTION THAT DOES THE SAME AS Math.max
+
+const maximo = (...numeros) => {
+  let resultado = -Infinity;
+  for (let numero of numeros) {
+    if (numero > resultado) resultado = numero;
+  }
+  return resultado;
+}
+console.log(maximo(4, 1, 9, -2)); // → 9
