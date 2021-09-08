@@ -982,7 +982,7 @@ console.log(maximo(4, 1, 9, -2)); // → 9
 
 // 39. COUNT CHARACTERS IN A WORD
 
-function contarCaracteres(word, letter) {
+const contarCaracteres = (word, letter) => {
   let count = 0;
   for (let i = 0; i < word.length; i++) {
     if (word[i] === letter) {
