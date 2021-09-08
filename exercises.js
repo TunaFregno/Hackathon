@@ -977,3 +977,26 @@ const maximo = (...numeros) => {
   return resultado;
 }
 console.log(maximo(4, 1, 9, -2)); // → 9
+
+
+
+// 39. COUNT CHARACTERS IN A WORD
+
+function contarCaracteres(word, letter) {
+  let count = 0;
+  for (let i = 0; i < word.length; i++) {
+    if (word[i] === letter) {
+      count += 1;
+    }
+  }
+  return count;
+}
+
+function contarFs(word) {
+  return contarCaracteres(word, "F");
+};
+
+console.log(contarFs("FFC"));
+// → 2
+console.log(contarCaracteres("kakkkerlak", "k"));
+// → 4
