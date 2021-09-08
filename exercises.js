@@ -992,6 +992,7 @@ const contarCaracteres = (word, letter) => {
   return count;
 }
 
+
 const contarFs = (word) => {
   return contarCaracteres(word, "F");
 };
