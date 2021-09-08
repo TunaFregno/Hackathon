@@ -992,11 +992,9 @@ const contarCaracteres = (word, letter) => {
   return count;
 }
 
-function contarFs(word) {
+const contarFs = (word) => {
   return contarCaracteres(word, "F");
 };
 
-console.log(contarFs("FFC"));
-// → 2
-console.log(contarCaracteres("kakkkerlak", "k"));
-// → 4
+console.log(contarFs("FFC")); // → 2
+console.log(contarCaracteres("kakkkerlak", "k")); // → 4
