@@ -182,6 +182,7 @@ console.log(invert({ a: 3, b: 2 }))// { 2: 'b', 3: 'a' }
 
 
 
+
 // 10. Min, Max, Length and Average
 // Return the smallest and highest value of an array as well as its length and its average value.
 
