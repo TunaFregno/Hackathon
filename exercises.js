@@ -21,7 +21,7 @@ console.log(fakeNews(news))
 // 2. THE ECHO!
 // Returns the same sentence minus two letters until only the first letter is left.
 
-function checkEcho(str) {
+const checkEcho = (str) => {
     if (str.length === 0) {
     return '';
     } else {
