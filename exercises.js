@@ -93,7 +93,7 @@ console.log(socialDistancing.getPerimeter()) // 31.41
 // 5. MYEACH
 // Function that simulates the .forEach method. It expects an array and a function.
 
-function myEach(arr, func) {
+const myEach = (arr, func) => {
 	for (let i= 0; i < arr.length; i++) {
   	console.log(func(arr[i]));
   }
