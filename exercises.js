@@ -39,7 +39,7 @@ console.log(checkEcho(yodel));
 // 3.  CREATE CALCULATOR
 // Allows a user to send 2 numbers, the type of operation and return the result.
 
-function calculator(num1, num2, operator) {
+const calculator = (num1, num2, operator) => {
     switch(operator) {
         case '+':
             return num1 + num2;
