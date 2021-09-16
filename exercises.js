@@ -129,7 +129,7 @@ console.log(myMap(myNewArr, plusFive));
 // 7. WORD COUNT
 // Count the number of words. Returns an error message with the first 30 words.
 
-function wordCount(sentence) {
+const wordCount = (sentence) => {
 	let splitSentence = sentence.split(' ')
   
   if (splitSentence.length > 30){
