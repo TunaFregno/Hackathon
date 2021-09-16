@@ -247,6 +247,7 @@ console.log(century(1001)) // "11th century"
 console.log(century(2005)) // "21st century"
 
 
+
 // 14. MYFILTER
 // Function that simulates the .filter method. It expects an array and a function.
 
