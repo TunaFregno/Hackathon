@@ -110,7 +110,7 @@ console.log(myEach(myArr, plusTwo));
 // 6. MYMAP
 // Function that simulates the .map method. It expects an array and a function.
 
-function myMap(arr, func) {
+const myMap = (arr, func) => {
     let newArr = [];
 	for (let i= 0; i < arr.length; i++) {
   	newArr.push(func(arr[i]));
