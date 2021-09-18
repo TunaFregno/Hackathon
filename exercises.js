@@ -1000,3 +1000,19 @@ const contarFs = (word) => {
 
 console.log(contarFs("FFC")); // → 2
 console.log(contarCaracteres("kakkkerlak", "k")); // → 4
+
+
+
+// 40. CALCULAR CENTURY
+
+const century = (year) => {
+	
+  let divedToHundred = year / 100;
+  let centuryResult = Math.ceil(divedToHundred)
+  
+  return `${centuryResult}th century`;
+}
+
+console.log(century(999)) // "10th century"
+console.log(century(1001)) // "11th century"
+console.log(century(2005)) // "21st century"
