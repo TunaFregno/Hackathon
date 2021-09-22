@@ -1016,3 +1016,24 @@ const century = (year) => {
 console.log(century(999)) // "10th century"
 console.log(century(1001)) // "11th century"
 console.log(century(2005)) // "21st century"
+
+
+
+// 41. Adding a Function to the String Prototype
+
+String.prototype.swapCase = function () {
+let arr = this.split("");
+    let newArr = [];
+    for(let x of arr){
+        if(x == x.toUpperCase()){
+               newArr.push(x.toLowerCase());  
+        }else if(x == x.toLowerCase()){
+              newArr.push(x.toUpperCase());
+        }
+    }
+    return newArr.join("")
+}
+
+
+console.log("Hello".swapCase()) // "hELLO"
+console.log("aBcD".swapCase()) // "aBcD"
