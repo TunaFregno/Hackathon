@@ -1059,3 +1059,21 @@ const getLength = (arr) => {
 
 console.log(getLength([1, [2, 3]])) // 3
 console.log(getLength([1, [2, [3, 4]]])) // 4
+
+
+
+// 43. Check if it is an Array
+
+const isArray = (parameter) => {
+	if (Array.isArray(parameter)){
+  console.log(true) 
+  } else {
+   console.log(false)
+  }
+}
+
+
+isArray('hello'); // => false
+isArray(['hello']); // => true
+isArray([2, {}, 10]); // => true
+isArray({ a: 2 }); // => false
