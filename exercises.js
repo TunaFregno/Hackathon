@@ -1022,8 +1022,10 @@ console.log(century(2005)) // "21st century"
 // 41. Adding a Function to the String Prototype
 
 String.prototype.swapCase = function () {
-let arr = this.split("");
-    let newArr = [];
+
+  let arr = this.split("");
+  let newArr = [];
+
     for(let x of arr){
         if(x == x.toUpperCase()){
                newArr.push(x.toLowerCase());  
@@ -1037,3 +1039,23 @@ let arr = this.split("");
 
 console.log("Hello".swapCase()) // "hELLO"
 console.log("aBcD".swapCase()) // "aBcD"
+
+
+
+// 42. Length of a Nested Array
+
+const getLength = (arr) => {
+
+	let count = 0;
+	arr.forEach(item => {
+		if (Array.isArray(item)) {
+			count += getLength(item);
+		} else {
+			count++;
+		}
+	});
+	return count;
+}
+
+console.log(getLength([1, [2, 3]])) // 3
+console.log(getLength([1, [2, [3, 4]]])) // 4
