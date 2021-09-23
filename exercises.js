@@ -1119,18 +1119,48 @@ const breakUpCamelCase = (str) => {
 
   let newWord = ''
   
-    for (let i in str) {
-      if (str[i] === str[i].toUpperCase()){
+  for (let i in str) {
+   if (str[i] === str[i].toUpperCase()){
         newWord += ` ${str[i]}`;
-      } else {
+    } else {
         newWord += str[i];
-      }
     }
+  }
     
-     return newWord
+    return newWord
    
+}
+  
+  
+console.log(breakUpCamelCase('breakUpCamelCase'));   // break Up Camel Case
+console.log(breakUpCamelCase('fullStackProgram'));   // full Stack Program
+
+
+
+  // 46. CAT AND MOUSE
+
+  const isCaught = (str) => {
+	
+  let strSplit = str.split('');
+  let count = 0;
+  
+  for (let i = 0; i < strSplit.length; i ++) {
+  	if (strSplit[i] === 'C') {
+    	count = 0;
+    }
+  	else if (strSplit[i] === '.'){
+    	count ++
+    }
   }
   
-  
-  console.log(breakUpCamelCase('breakUpCamelCase'));   // break Up Camel Case
-  console.log(breakUpCamelCase('fullStackProgram'));   // full Stack Program
+  if (count > 2) {
+  return false;
+  } else {
+  return true
+  }
+}
+
+
+console.log(isCaught('C.....m')) // => false
+console.log(isCaught('C..m')) // => true
+console.log(isCaught('..C..m')) // => true
