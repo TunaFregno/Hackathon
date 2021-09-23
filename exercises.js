@@ -1110,3 +1110,27 @@ console.log(smallest(261235));  // [ 1, 2 ]
 console.log(smallest(5967392)); // [ 2, 6 ]
 console.log(smallest(517418));  // [ [ 1, 1 ], [ 1, 4 ] ]
 console.log(smallest(467498));  // [ [ 4, 0 ], [ 4, 3 ] ]
+
+
+
+// 45. BREAK CAME CASE
+
+const breakUpCamelCase = (str) => {
+
+  let newWord = ''
+  
+    for (let i in str) {
+      if (str[i] === str[i].toUpperCase()){
+        newWord += ` ${str[i]}`;
+      } else {
+        newWord += str[i];
+      }
+    }
+    
+     return newWord
+   
+  }
+  
+  
+  console.log(breakUpCamelCase('breakUpCamelCase'));   // break Up Camel Case
+  console.log(breakUpCamelCase('fullStackProgram'));   // full Stack Program
