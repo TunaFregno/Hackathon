@@ -1077,3 +1077,36 @@ isArray('hello'); // => false
 isArray(['hello']); // => true
 isArray([2, {}, 10]); // => true
 isArray({ a: 2 }); // => false
+
+
+
+
+// 44. SMALLEST DIGIT 
+
+const smallest = (num) => {
+
+	let numSplit = num.toString().split('');
+  
+  let numToInt = numSplit.map((n) => {
+  	 return parseInt(n)
+  })
+  
+  let minNum =  Math.min(...numToInt);
+  
+  let numsArr = [];
+  
+ 	for (let i in numToInt) {
+    
+      if ( numToInt[i] === minNum) {
+      numsArr.push([minNum, parseInt(i)])
+    	}
+    }
+  return numsArr; 
+ 
+}
+
+
+console.log(smallest(261235));  // [ 1, 2 ]
+console.log(smallest(5967392)); // [ 2, 6 ]
+console.log(smallest(517418));  // [ [ 1, 1 ], [ 1, 4 ] ]
+console.log(smallest(467498));  // [ [ 4, 0 ], [ 4, 3 ] ]
