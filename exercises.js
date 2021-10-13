@@ -1161,3 +1161,28 @@ const isCaught = (str) => {
 console.log(isCaught('C.....m')) // => false
 console.log(isCaught('C..m')) // => true
 console.log(isCaught('..C..m')) // => true
+
+
+// 47. COUNT REPETITIONS
+
+const countAuth = (arr) => {
+  let track = {};
+  let count = 1;
+  let auths = [...new Set(arr)];
+
+  auths.forEach(a => {
+    count = 1;
+    arr.forEach(c => {
+      if (a === c) {
+        track[a] = count++;
+      }
+    })
+  })
+
+  return track
+}
+
+
+let authors = ['kerouac', 'fante', 'fante', 'buk', 'hemingway', 'hornby', 'kerouac', 'buk', 'fante']
+
+console.log(countAuth(authors))
