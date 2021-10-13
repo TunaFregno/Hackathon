@@ -538,7 +538,7 @@ console.log(ticTacToe([
 
 // 21. REMOVE THE LAST VOWEL 
 
-function killLastVowel(sentences) {
+const killLastVowel = (sentences) => {
   let eachW = sentences.split(' ');
   let vowLs = 'aeiouAEIOU';
   let newArrW = [];
