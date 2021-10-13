@@ -631,7 +631,6 @@ console.log(sortContacts([
 
 
 
-
 // 23. DONT WORRY, BE HAPPY
 
 function happyOrNot(num) {
