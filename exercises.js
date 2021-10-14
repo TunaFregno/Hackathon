@@ -566,7 +566,7 @@ console.log(killLastVowel("I love Javascript so much."))
 
 // 22. SORT YOUR CONTACS
 
-function sortContacts(arr, sorting) {
+const sortContacts = (arr, sorting) => {
   if (arr) {
     if (sorting === "ASC") {
       return arr.sort(ascending)
