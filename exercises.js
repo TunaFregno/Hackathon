@@ -588,7 +588,8 @@ const ascending = (a, b) => {
     return 1;
   }
 }
-function descending(a, b) {
+
+const descending = (a, b) => {
   if (a.split(" ")[1] > b.split(" ")[1]) {
     return -1;
   } else {
