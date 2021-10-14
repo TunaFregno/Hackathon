@@ -581,7 +581,7 @@ const sortContacts = (arr, sorting) => {
 
 }
 
-function ascending(a, b) {
+const ascending = (a, b) => {
   if (a.split(" ")[1] < b.split(" ")[1]) {
     return -1;
   } else {
