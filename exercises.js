@@ -1163,6 +1163,7 @@ console.log(isCaught('C..m')) // => true
 console.log(isCaught('..C..m')) // => true
 
 
+
 // 47. COUNT REPETITIONS
 
 const countAuth = (arr) => {
@@ -1186,3 +1187,41 @@ const countAuth = (arr) => {
 let authors = ['kerouac', 'fante', 'fante', 'buk', 'hemingway', 'hornby', 'kerouac', 'buk', 'fante']
 
 console.log(countAuth(authors))
+
+
+
+// 48. SPLIT THE BILL
+
+
+const splitTheBill = (obj) => {
+  let total = 0;
+  let index = 0;
+  let eachAmount = 0;
+  let newVal = 0;
+
+  for (let [key, value] of Object.entries(obj)) {
+    total += value;
+    index++;
+    eachAmount = total / index;
+
+  }
+
+  for (let [key, value] of Object.entries(obj)) {
+
+    if (value !== eachAmount || value === eachAmount) {
+      newVal = eachAmount - value;
+      obj[key] = newVal;
+    }
+
+  }
+  return obj
+}
+
+
+const group = {
+  Amy: 20,
+  Bill: 15,
+  Chris: 10
+}
+
+console.log(splitTheBill(group)); // => { Amy: -5, Bill: 0, Chris: 5 }
