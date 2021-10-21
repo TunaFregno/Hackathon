@@ -554,7 +554,6 @@ const killLastVowel = (sentences) => {
 
 }
 
-
 console.log(killLastVowel("Propulsion is a great place to get headache."))
 // "Propulsin s  gret plac t gt headach."
 
