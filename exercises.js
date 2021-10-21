@@ -617,9 +617,6 @@ console.log(sortContacts([
 console.log(sortContacts([], "DESC")) // []
 console.log(sortContacts(null, "DESC")) // []
 console.log(sortContacts(undefined, "DESC")) // []
-
-
-
 console.log(sortContacts([
   "Bat Man",
   "Bat Girl",
