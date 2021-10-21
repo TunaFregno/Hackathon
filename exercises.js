@@ -563,7 +563,6 @@ console.log(killLastVowel("I love Javascript so much."))
 
 
 
-
 // 22. SORT YOUR CONTACS
 
 const sortContacts = (arr, sorting) => {
