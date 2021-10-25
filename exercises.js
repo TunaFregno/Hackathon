@@ -629,7 +629,7 @@ console.log(sortContacts([
 
 // 23. DONT WORRY, BE HAPPY
 
-function happyOrNot(num) {
+const happyOrNot = (num) => {
   let str = num.toString().split('');
   let empt = [];
   let total = 0;
