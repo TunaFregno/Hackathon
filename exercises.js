@@ -750,7 +750,6 @@ console.log(time_conversion(59)) // "00:59"
 
 // 27. COUNTING VOWELS IN A STRING 
 
-
 const count_vowels = (string) => {
   let vowels = 'aeiou';
   let totalV = 0;
