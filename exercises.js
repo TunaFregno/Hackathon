@@ -613,7 +613,6 @@ console.log(sortContacts([
 // ['Ban Ki-moon','António Guterres','Boutros Boutros-Ghali','Kofi Annan']
 
 
-
 console.log(sortContacts([], "DESC")) // []
 console.log(sortContacts(null, "DESC")) // []
 console.log(sortContacts(undefined, "DESC")) // []
